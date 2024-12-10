@@ -33,7 +33,7 @@
             padding: 5px 10px;
             background-color: #ff0000;
             color: white;
-            font-size: 18px; /* ফন্ট সাইজ অনুযায়ী জায়গা */
+            font-size: 18px;
             font-weight: bold;
             border-radius: 5px;
             transition: background-color 0.3s ease;
@@ -41,12 +41,29 @@
         }
 
         .visit-channel .btn img {
-            height: 20px; /* লোগোর আকার ছোট করা হয়েছে */
+            height: 20px;
             margin-right: 8px;
         }
 
         .visit-channel .btn:hover {
             background-color: #cc0000;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -54,9 +71,8 @@
 
     <!-- Header Section -->
     <header>
-        <!-- Logo Image -->
-        <img src="images/logo.png" alt="Logo" class="logo"> <!-- এখানে logo.png ফাইল ব্যবহার হচ্ছে -->
-        <h1>Welcome To Digital Education In West Bengal!</h1>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>পশ্চিমবঙ্গের ডিজিটাল শিক্ষাগ্রহণে আপনাকে স্বাগতম</h1>
     </header>
 
     <!-- Visit Our Channel Button -->
@@ -68,9 +84,10 @@
 
     <!-- About Section -->
     <section class="about">
-        <h2>About Our Channel</h2>
+        <h2>আমার ওয়েবসাইটে আপনাকে স্বাগতম!</h2>
         <img src="images/photo.jpg" alt="Your Photo" class="profile-photo">
-        <p>Welcome to my website! I am the creator of the YouTube channel <strong>Study Without Money - MATH</strong>. Here, I share educational content on mathematics, focusing on competitive exams and practical math.</p>
+        <p>আমি <strong><a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" target="_blank">Study Without Money - MATH</a></strong> ইউটিউব চ্যানেলটির পরিচালক। এখানে আমি গণিতের উপর শিক্ষামূলক বিষয়বস্তু পোস্ট করি, প্রতিযোগিতামূলক পরীক্ষা এবং বাস্তব জীবনের প্রজনীয়তার উপর নির্ভর করে।</p>
+        <p class="name">MD Kaif Khan</p>
     </section>
 
     <!-- Contact Section -->
