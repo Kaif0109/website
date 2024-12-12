@@ -79,7 +79,7 @@ h1 {
     left: 0;
 }
 
-/* Menu Heading (added bold and centered) */
+/* Menu Heading */
 .menu-heading {
     font-size: 24px;
     font-weight: bold;
@@ -150,8 +150,8 @@ h1 {
 
 /* Profile photo styling */
 .profile-photo {
-    width: 150px; /* প্রস্থ */
-    height: 250px; /* উচ্চতা */
+    width: 150px; /* Width */
+    height: 150px; /* Height (adjusted for a more balanced circle) */
     border-radius: 50%;
     margin-bottom: 20px;
 }
