@@ -6,12 +6,6 @@ body {
     padding: 0;
 }
 
-/* Dimmed Effect for Body */
-body.dimmed {
-    background-color: rgba(0, 0, 0, 0.5); /* Dim the background when menu is open */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
 /* Header Section */
 header {
     text-align: center;
@@ -37,7 +31,7 @@ h1 {
     left: 20px;
     cursor: pointer;
     z-index: 10;
-    transition: 0.4s;
+    transition: 0.4s; /* Smooth transition for icon */
 }
 
 .menu-icon .bar {
@@ -45,7 +39,7 @@ h1 {
     height: 3px;
     background-color: white;
     margin: 5px 0;
-    transition: 0.4s;
+    transition: 0.4s; /* Smooth transition for icon */
 }
 
 /* Active state for the menu icon */
@@ -111,7 +105,7 @@ h1 {
 
 #overlay.active {
     display: block;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background when active */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Close button inside the side menu */
@@ -166,19 +160,11 @@ h1 {
     background-color: #f4f4f4;
 }
 
-/* Ensuring the profile photo size doesn't change */
 .profile-photo {
-    width: 200px; /* Fixed width */
-    height: 200px; /* Fixed height */
+    width: 200px;
+    height: auto;
     border-radius: 50%;
     border: 3px solid #000;
-    object-fit: cover; /* Ensures image doesn't stretch/distort */
-}
-
-/* Ensure that no other part of the CSS affects image size */
-img {
-    max-width: 100%; /* Prevents images from overflowing their containers */
-    height: auto; /* Keeps the aspect ratio intact */
 }
 
 /* About Section */
@@ -201,19 +187,18 @@ img {
     color: #00dfed;
 }
 
-/* Social Links */
+/* Social Links (No changes made) */
 .social-links a img {
     width: 40px;
     margin: 10px;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s;
 }
 
 .social-links a:hover img {
     transform: scale(1.1);
-    opacity: 0.8;
 }
 
-/* Footer Section */
+/* Footer Section (New) */
 footer {
     background-color: #333;
     color: white;
