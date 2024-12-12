@@ -58,8 +58,8 @@ h1 {
 }
 
 .youtube-logo {
-    width: 25px;
-    height: 25px;
+    width: 20px; /* আগের সাইজ ফিরিয়ে দিলাম */
+    height: 20px;
     margin-right: 10px;
 }
 
@@ -76,7 +76,7 @@ h1 {
 }
 
 .social-links a img {
-    width: 40px;
+    width: 30px; /* আগের মতো ছোট রাখা হলো */
     margin: 10px;
     transition: transform 0.3s;
 }
@@ -134,7 +134,7 @@ h1 {
 
 .sidebar ul li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* আগের সাইজ */
     color: #333;
     display: block;
     transition: color 0.3s;
@@ -146,8 +146,7 @@ h1 {
 
 /* Dropdown Section */
 .dropdown {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 10px;
     background-color: #f4f4f4;
     border-left: 3px solid #00dfed;
@@ -157,7 +156,7 @@ h1 {
 .dropdown a {
     color: #ff0000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     display: block;
     margin: 5px 0;
 }
