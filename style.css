@@ -72,6 +72,14 @@ h1 {
     margin-right: 8px; /* টেক্সট ও লোগোর মধ্যে স্পেস */
 }
 
+.profile-photo {
+    width: 150px; /* পূর্বের মতো সাইজ */
+    height: 150px; /* পূর্বের মতো সাইজ */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 20px 0;
+}
+
 /* Contact Section */
 .contact {
     padding: 20px;
