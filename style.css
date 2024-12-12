@@ -58,8 +58,8 @@ h1 {
 }
 
 .youtube-logo {
-    width: 25px;
-    height: 25px;
+    width: 20px; /* পূর্বের সাইজ 25px ছিল, এটি ছোট করা হলো */
+    height: 20px; /* একইভাবে উচ্চতাও ছোট করা হলো */
     margin-right: 10px;
 }
 
