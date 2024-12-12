@@ -48,8 +48,8 @@ h1 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: white; /* সাইডবারের ব্যাকগ্রাউন্ড সাদা */
+    color: black; /* সাইডবারের লেখা কালো */
     transition: 0.3s;
     padding-top: 50px;
     z-index: 9;
@@ -63,13 +63,13 @@ h1 {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: #fff;
+    color: black; /* সাইডবারের লেখা কালো */
     display: block;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
-    background-color: #575757;
+    background-color: #f1f1f1; /* হোভার করার সময় ব্যাকগ্রাউন্ড হালকা সাদা */
 }
 
 /* Overlay (for dimming the page when side menu is open) */
@@ -94,7 +94,7 @@ h1 {
     top: 10px;
     right: 20px;
     font-size: 30px;
-    color: white;
+    color: black; /* ক্লোজ বাটনের কালো */
     cursor: pointer;
 }
 
