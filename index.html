@@ -16,6 +16,40 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        .bar {
+            width: 30px;
+            height: 5px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
         /* Sidebar Menu */
         .side-menu {
             position: fixed;
@@ -27,28 +61,29 @@
             transition: 0.3s;
             padding-top: 60px;
             z-index: 1000;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
         }
 
         .side-menu a {
-            padding: 8px 8px 8px 32px;
+            padding: 10px 15px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
             color: #000000;
             display: block;
             transition: 0.3s;
         }
 
-        .side-menu a:hover,
-        .side-menu a:active {
-            color: #28a745;
+        .side-menu a:hover {
+            color: #007bff;
+            background-color: #f1f1f1;
         }
 
-        .side-menu .submenu {
+        .submenu {
             display: none;
-            padding-left: 30px;
+            padding-left: 20px;
         }
 
-        .side-menu .submenu.active {
+        .submenu.active {
             display: block;
         }
 
@@ -56,8 +91,8 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 30px;
-            color: white;
+            font-size: 25px;
+            color: black;
             cursor: pointer;
         }
 
@@ -65,11 +100,7 @@
             left: 0;
         }
 
-        body.dimmed {
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
+        /* Overlay */
         .overlay {
             display: none;
             position: fixed;
@@ -93,7 +124,7 @@
 
         .btn {
             display: inline-block;
-            background-color: #ff4b5c;
+            background-color: #28a745;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -102,7 +133,7 @@
         }
 
         .btn:hover {
-            background-color: #e63946;
+            background-color: #218838;
         }
 
         .youtube-logo {
@@ -118,16 +149,15 @@
         }
 
         .profile-photo {
-            width: 175px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
         }
 
         .name {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
-            margin-top: 20px;
         }
 
         /* Contact Section */
@@ -144,7 +174,6 @@
         .social-links img {
             width: 30px;
             height: 30px;
-            margin: 5px;
         }
     </style>
 </head>
@@ -167,19 +196,16 @@
     <!-- Sidebar Menu -->
     <div class="side-menu" id="sideMenu">
         <span class="close-btn" onclick="closeMenu()">×</span>
-
-        <div class="menu-heading">Menu</div>
-
-        <a href="javascript:void(0)" onclick="toggleSubmenu()">Our Free Batch</a>
+        <a href="javascript:void(0)" onclick="toggleSubmenu()">Free Batch</a>
         <div class="submenu">
-            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkpQmx1Zy_KSIdcvPbCD8_h6&si=vZr5R6gZ-CzTNkv1" target="_blank">Math Foundation Batch 2025</a>
-            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkrdB7xez-RnSJEtB7EVwst6&si=j83B14ZZZWOr9Nh6" target="_blank">Math Chapter Wise All Type Questions</a>
+            <a href="#">Math Foundation</a>
+            <a href="#">Chapter-Wise Math</a>
         </div>
     </div>
 
-    <!-- Visit Our Channel Button -->
+    <!-- Visit Channel Button -->
     <section class="visit-channel">
-        <a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" class="btn">
+        <a href="#" class="btn">
             <img src="images/youtube-logo.png" alt="YouTube Logo" class="youtube-logo"> Visit Our Channel
         </a>
     </section>
@@ -188,7 +214,7 @@
     <section class="about">
         <h2>আমার ওয়েবসাইটে আপনাকে স্বাগতম!</h2>
         <img src="images/photo.jpg" alt="Your Photo" class="profile-photo">
-        <p>আমি <strong><a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" target="_blank">Study Without Money - MATH</a></strong> ইউটিউব চ্যানেলটির পরিচালক। এখানে আমি গণিতের উপর শিক্ষামূলক বিষয়বস্তু পোস্ট করি, প্রতিযোগিতামূলক পরীক্ষা এবং বাস্তব জীবনের প্রজনীয়তার উপর নির্ভর করে।</p>
+        <p>আমি <strong>Study Without Money - MATH</strong> ইউটিউব চ্যানেলের পরিচালক। গণিতের উপর শিক্ষামূলক বিষয়বস্তু পোস্ট করি।</p>
         <p class="name">MD Kaif Khan</p>
     </section>
 
@@ -196,6 +222,7 @@
     <section class="contact">
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:khanmdkaif2024@gmail.com">khanmdkaif2024@gmail.com</a></p>
+        
         <div class="social-links">
             <!-- Social Media Links -->
             <a href="https://t.me/+uL3gZkabZ_1lNmQ1" target="_blank">
@@ -241,18 +268,25 @@
         function toggleMenu() {
             var menu = document.getElementById("sideMenu");
             var overlay = document.getElementById("overlay");
-            var body = document.body;
 
             if (menu.classList.contains("open")) {
                 menu.classList.remove("open");
                 overlay.classList.remove("active");
-                body.classList.remove("dimmed");
             } else {
                 menu.classList.add("open");
                 overlay.classList.add("active");
-                body.classList.add("dimmed");
             }
         }
 
         function closeMenu() {
-            var menu = document.getElementById("sideMenu");
+            document.getElementById("sideMenu").classList.remove("open");
+            document.getElementById("overlay").classList.remove("active");
+        }
+
+        function toggleSubmenu() {
+            var submenu = document.querySelector(".submenu");
+            submenu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
