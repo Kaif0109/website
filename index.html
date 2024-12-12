@@ -1,171 +1,165 @@
-/* Basic Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Without Money</title>
 
-header {
-    text-align: center;
-    background-color: #00dfed;
-    padding: 20px;
-}
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-header .logo {
-    width: 100px;
-    height: auto;
-}
+    <!-- OpenGraph Metadata -->
+    <meta property="og:title" content="Study Without Money - Digital Education in West Bengal">
+    <meta property="og:description" content="Welcome to my website! I am the creator of the YouTube channel 'Study Without Money - MATH'. Here, I share educational content on mathematics, focusing on competitive exams and practical math.">
+    <meta property="og:image" content="images/opengraph.png">
+    <meta property="og:url" content="https://yourwebsite.github.io">
+    <meta property="og:type" content="website">
 
-h1 {
-    color: #000;
-    font-size: 24px;
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sidebar CSS */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: 0.3s;
+            padding-top: 20px;
+            z-index: 1000;
+        }
 
-.about {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 20px;
-}
+        .sidebar.open {
+            left: 0;
+        }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    margin: 20px 0;
-}
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
 
-.about p {
-    font-size: 16px;
-    color: #333;
-}
+        .sidebar a:hover {
+            background-color: #575757;
+        }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #ff0000;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
+        .sidebar .submenu {
+            display: none;
+            margin-left: 20px;
+        }
 
-.btn:hover {
-    background-color: #d10000;
-}
+        .sidebar .submenu a {
+            font-size: 14px;
+        }
 
-.youtube-logo {
-    width: 20px; /* আগের সাইজ ফিরিয়ে দিলাম */
-    height: 20px;
-    margin-right: 10px;
-}
+        /* Hamburger Menu CSS */
+        .hamburger {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            z-index: 1100;
+        }
 
-.contact {
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 20px;
-    text-align: center;
-}
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
 
-.contact a {
-    text-decoration: none;
-    color: #00dfed;
-}
+        /* Hide sidebar when screen is clicked outside */
+        body.dimmed {
+            overflow: hidden;
+        }
 
-.social-links a img {
-    width: 30px; /* আগের মতো ছোট রাখা হলো */
-    margin: 10px;
-    transition: transform 0.3s;
-}
+        body.dimmed::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 900;
+        }
+    </style>
+</head>
+<body>
 
-.social-links a:hover img {
-    transform: scale(1.1);
-}
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-/* Navigation Menu */
-.menu-bar {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <a href="#" onclick="toggleSubmenu(event, 'freeBatch')">Our Free Batch</a>
+        <div class="submenu" id="freeBatch">
+            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkpQmx1Zy_KSIdcvPbCD8_h6&si=cLassl1vvyqq6odF" target="_blank">Math Foundation Batch 2025</a>
+            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkrdB7xez-RnSJEtB7EVwst6&si=Rie17fH8XO63SO2T" target="_blank">Math Chapter Wise All Type Questions</a>
+        </div>
+    </div>
 
-.menu-bar div {
-    width: 100%;
-    height: 4px;
-    background-color: #000;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-}
+    <!-- Header Section -->
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>পশ্চিমবঙ্গের ডিজিটাল শিক্ষাগ্রহণে আপনাকে স্বাগতম</h1>
+    </header>
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: left 0.3s ease;
-}
+    <!-- Visit Our Channel Button -->
+    <section class="visit-channel">
+        <a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" class="btn">
+            <img src="images/youtube-logo.png" alt="YouTube Logo"> Visit Our Channel
+        </a>
+    </section>
 
-.sidebar.active {
-    left: 0;
-}
+    <!-- About Section -->
+    <section class="about">
+        <h2>আমার ওয়েবসাইটে আপনাকে স্বাগতম!</h2>
+        <img src="images/photo.jpg" alt="Your Photo" class="profile-photo">
+        <p>আমি <strong><a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" target="_blank">Study Without Money - MATH</a></strong> ইউটিউব চ্যানেলটির পরিচালক। এখানে আমি গণিতের উপর শিক্ষামূলক বিষয়বস্তু পোস্ট করি, প্রতিযোগিতামূলক পরীক্ষা এবং বাস্তব জীবনের প্রজনীয়তার উপর নির্ভর করে।</p>
+        <p class="name">MD Kaif Khan</p>
+    </section>
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:khanmdkaif2024@gmail.com">khanmdkaif2024@gmail.com</a></p>
+    </section>
 
-.sidebar ul li {
-    margin: 20px 0;
-}
+    <!-- JavaScript -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const body = document.body;
+            sidebar.classList.toggle('open');
+            body.classList.toggle('dimmed');
+        }
 
-.sidebar ul li a {
-    text-decoration: none;
-    font-size: 16px; /* আগের সাইজ */
-    color: #333;
-    display: block;
-    transition: color 0.3s;
-}
+        function toggleSubmenu(event, submenuId) {
+            event.preventDefault();
+            const submenu = document.getElementById(submenuId);
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
 
-.sidebar ul li a:hover {
-    color: #00dfed;
-}
-
-/* Dropdown Section */
-.dropdown {
-    margin-left: 20px;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-left: 3px solid #00dfed;
-    display: none;
-}
-
-.dropdown a {
-    color: #ff0000;
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
-    margin: 5px 0;
-}
-
-.dropdown a:hover {
-    color: #d10000;
-}
-
-/* Animation for Dropdown */
-.sidebar ul li.open .dropdown {
-    display: block;
-}
+        document.body.addEventListener('click', (event) => {
+            const sidebar = document.getElementById('sidebar');
+            if (!sidebar.contains(event.target) && !event.target.closest('.hamburger')) {
+                sidebar.classList.remove('open');
+                document.body.classList.remove('dimmed');
+            }
+        });
+    </script>
+</body>
+</html>
