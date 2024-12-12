@@ -10,6 +10,7 @@ header {
     text-align: center;
     background-color: #00dfed;
     padding: 20px;
+    position: relative; /* যাতে থ্রি-বার উপরের কোনায় ঠিকভাবে রাখা যায় */
 }
 
 header .logo {
@@ -22,24 +23,20 @@ h1 {
     font-size: 24px;
 }
 
-.about {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 20px;
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    margin: 20px 0;
-}
-
-.about p {
-    font-size: 16px;
-    color: #333;
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
 }
 
 /* Visit Our Channel Section */
