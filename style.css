@@ -42,15 +42,27 @@ h1 {
     color: #333;
 }
 
+/* Visit Our Channel Section */
+.visit-channel {
+    display: flex;
+    justify-content: center; /* সেকশনের মধ্যে পুরোপুরি মাঝখানে রাখতে */
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
     background-color: #ff0000;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px; /* ফন্ট সাইজ */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -58,11 +70,12 @@ h1 {
 }
 
 .youtube-logo {
-    width: 18px; /* ফন্টের সাইজ অনুযায়ী সমন্বয় করা হয়েছে */
-    height: 18px; /* প্রোপোরশন ঠিক রাখতে উচ্চতা সমান */
-    margin-right: 8px;
+    width: 18px; /* লোগো আকার টেক্সটের সাথে মিল */
+    height: 18px;
+    margin-right: 8px; /* টেক্সট ও লোগোর মধ্যে স্পেস */
 }
 
+/* Contact Section */
 .contact {
     padding: 20px;
     background-color: #fff;
