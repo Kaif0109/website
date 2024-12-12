@@ -73,8 +73,8 @@ h1 {
 }
 
 .profile-photo {
-    width: 150px; /* পূর্বের মতো সাইজ */
-    height: 150px; /* পূর্বের মতো সাইজ */
+    width: 75px; /* পূর্বের মতো সাইজ */
+    height: 75px; /* পূর্বের মতো সাইজ */
     border-radius: 50%;
     border: 2px solid #fff;
     margin: 20px 0;
