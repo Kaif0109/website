@@ -81,18 +81,20 @@ h1 {
     background-color: #f4f4f4; /* ব্যাকগ্রাউন্ড রঙ (প্রয়োজনে পরিবর্তন করুন) */
 }
 
-.about {
-    text-align: center; /* ছবি ও টেক্সটকে সেন্টার করা */
-    margin: 0 auto; /* সেকশন সেন্টার করতে */
-    padding: 20px;
-}
-
+/* আপনার ছবির সাইজ ও অবস্থান নির্ধারণ */
 .profile-photo {
     width: 200px; /* ফটো প্রস্থ */
     height: auto; /* অনুপাত ঠিক রাখতে */
     border-radius: 50%; /* গোলাকার ছবি */
     border: 3px solid #000; /* কালো বর্ডার */
     display: inline-block; /* সেন্টার সঠিকভাবে দেখাতে সাহায্য করে */
+}
+
+/* About Section - টেক্সট সেন্টার করা */
+.about {
+    text-align: center; /* ছবি ও টেক্সটকে সেন্টার করা */
+    margin: 0 auto; /* সেকশন সেন্টার করতে */
+    padding: 20px;
 }
 
 /* Contact Section */
