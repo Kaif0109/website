@@ -1,258 +1,73 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Without Money</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-    <!-- OpenGraph Metadata -->
-    <meta property="og:title" content="Study Without Money - Digital Education in West Bengal">
-    <meta property="og:description" content="Welcome to my website! I am the creator of the YouTube channel 'Study Without Money - MATH'. Here, I share educational content on mathematics, focusing on competitive exams and practical math.">
-    <meta property="og:image" content="images/opengraph.png">
-    <meta property="og:url" content="https://yourwebsite.github.io">
-    <meta property="og:type" content="website">
-
-    <!-- CSS -->
+<!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
         /* Sidebar Menu */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background-color: #ffffff;
-            transition: 0.3s;
-            padding-top: 60px;
-            z-index: 1000;
-        }
+/* Sidebar Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
 
-        .side-menu a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #000000;
-            display: block;
-            transition: 0.3s;
-        }
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000; /* কালো ফন্ট */
+    display: block;
+    transition: 0.3s;
+}
 
-        .side-menu a:hover,
-        .side-menu a:active {
-            color: #28a745;
-        }
+/* Change color to green when hover or click */
+.side-menu a:hover,
+.side-menu a:active {
+    color: #28a745; /* সবুজ ফন্ট */
+}
 
-        .side-menu .submenu {
-            display: none;
-            padding-left: 30px;
-        }
+.side-menu .submenu {
+    display: none;
+    padding-left: 30px;
+}
 
-        .side-menu .submenu.active {
-            display: block;
-        }
+.side-menu .submenu.active {
+    display: block;
+}
 
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
+/* Cross icon */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
 
-        .side-menu.open {
-            left: 0;
-        }
+/* When the menu is visible */
+.side-menu.open {
+    left: 0;
+}
 
-        body.dimmed {
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
+/* Body dimming when sidebar is open */
+body.dimmed {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 500;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        /* Visit Channel Button */
-        .visit-channel {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #ff4b5c;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background-color: #e63946;
-        }
-
-        .youtube-logo {
-            width: 30px;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-
-        /* About Section */
-        .about {
-            text-align: center;
-            margin: 50px;
-        }
-
-        .profile-photo {
-            width: 175px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* Contact Section */
-        .contact {
-            text-align: center;
-            margin: 50px;
-        }
-
-        .social-links a {
-            margin: 10px;
-            display: inline-block;
-        }
-
-        .social-links img {
-            width: 30px;
-            height: 30px;
-            margin: 5px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Overlay -->
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-
-    <!-- Header Section -->
-    <header>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <img src="images/logo.png" alt="Logo" class="logo">
-        <h1>পশ্চিমবঙ্গের ডিজিটাল শিক্ষাগ্রহণে আপনাকে স্বাগতম</h1>
-    </header>
-
-    <!-- Sidebar Menu -->
-    <div class="side-menu" id="sideMenu">
-        <span class="close-btn" onclick="closeMenu()">×</span>
-
-        <div class="menu-heading">Menu</div>
-
-        <a href="javascript:void(0)" onclick="toggleSubmenu()">Our Free Batch</a>
-        <div class="submenu">
-            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkpQmx1Zy_KSIdcvPbCD8_h6&si=vZr5R6gZ-CzTNkv1" target="_blank">Math Foundation Batch 2025</a>
-            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkrdB7xez-RnSJEtB7EVwst6&si=j83B14ZZZWOr9Nh6" target="_blank">Math Chapter Wise All Type Questions</a>
-        </div>
-    </div>
-
-    <!-- Visit Our Channel Button -->
-    <section class="visit-channel">
-        <a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" class="btn">
-            <img src="images/youtube-logo.png" alt="YouTube Logo" class="youtube-logo"> Visit Our Channel
-        </a>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <h2>আমার ওয়েবসাইটে আপনাকে স্বাগতম!</h2>
-        <img src="images/photo.jpg" alt="Your Photo" class="profile-photo">
-        <p>আমি <strong><a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" target="_blank">Study Without Money - MATH</a></strong> ইউটিউব চ্যানেলটির পরিচালক। এখানে আমি গণিতের উপর শিক্ষামূলক বিষয়বস্তু পোস্ট করি, প্রতিযোগিতামূলক পরীক্ষা এবং বাস্তব জীবনের প্রজনীয়তার উপর নির্ভর করে।</p>
-        <p class="name">MD Kaif Khan</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:khanmdkaif2024@gmail.com">khanmdkaif2024@gmail.com</a></p>
-        <div class="social-links">
-            <!-- Social Media Links -->
-            <a href="https://t.me/+uL3gZkabZ_1lNmQ1" target="_blank">
-                <img src="images/telegram-logo.png" alt="Telegram Logo">
-            </a>
-            <a href="https://whatsapp.com/channel/0029VaqnzhvFCCodXitjcX1e" target="_blank">
-                <img src="images/whatsapp-logo.png" alt="WhatsApp Logo">
-            </a>
-            <a href="https://www.facebook.com/share/15kSBwuHtF/" target="_blank">
-                <img src="images/facebook-logo.png" alt="Facebook Logo">
-            </a>
-            <a href="https://www.instagram.com/studywithoutmoneymath?igsh=Mm55aWRvY2J4bmtp" target="_blank">
-                <img src="images/instagram-logo.png" alt="Instagram Logo">
-            </a>
-            <a href="https://x.com/SWMMath?t=OD-KYDpR2ptiODqiGloBXA&s=09" target="_blank">
-                <img src="images/twitter-logo.png" alt="Twitter Logo">
-            </a>
-            <a href="https://www.threads.net/@studywithoutmoneymath" target="_blank">
-                <img src="images/threads-logo.png" alt="Threads Logo">
-            </a>
-            <a href="https://qr.ae/pYXcSl" target="_blank">
-                <img src="images/quora-logo.png" alt="Quora Logo">
-            </a>
-            <a href="https://in.linkedin.com/in/studywithoutmoney-math" target="_blank">
-                <img src="images/linkedin-logo.png" alt="LinkedIn Logo">
-            </a>
-            <a href="https://pin.it/5sgWGUQ8N" target="_blank">
-                <img src="images/pinterest-logo.png" alt="Pinterest Logo">
-            </a>
-            <a href="https://www.snapchat.com/add/swmmath?share_id=ZJn5I3qzIdw&locale=en-US" target="_blank">
-                <img src="images/snapchat-logo.png" alt="Snapchat Logo">
-            </a>
-            <a href="https://sharechat.com/profile/studywithoutmoneymath?d=n" target="_blank">
-                <img src="images/sharechat-logo.png" alt="Sharechat Logo">
-            </a>
-            <a href="https://www.reddit.com/user/ElectronicOne6110/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank">
-                <img src="images/reddit-logo.png" alt="Reddit Logo">
-            </a>
-        </div>
-    </section>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("sideMenu");
-            var overlay = document.getElementById("overlay");
-            var body = document.body;
-
-            if (menu.classList.contains("open")) {
-                menu.classList.remove("open");
-                overlay.classList.remove("active");
-                body.classList.remove("dimmed");
-            } else {
-                menu.classList.add("open");
-                overlay.classList.add("active");
-                body.classList.add("dimmed");
-            }
-        }
-
-        function closeMenu() {
-            var menu = document.getElementById("sideMenu");
+/* Click area outside the sidebar */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+} html এর মধ্যে এটা আগে থেকে আছে এখানে যা যা পরিবর্তন করার করো যাতে css ফাইল এ আর পরিবর্তন না করতে হয়
