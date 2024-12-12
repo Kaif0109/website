@@ -59,15 +59,14 @@ h1 {
     top: -8px;
 }
 
-/* Side Menu */
+/* Sidebar Menu */
 .side-menu {
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: white;
-    color: black;
+    background-color: #fff; /* Change background color to white */
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
     z-index: 9;
@@ -81,13 +80,14 @@ h1 {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: black;
+    color: #333; /* Change text color to dark gray for better contrast on white background */
     display: block;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
     background-color: #f1f1f1;
+    color: #000; /* Dark color for hover effect */
 }
 
 /* Overlay (for dimming the page when side menu is open) */
