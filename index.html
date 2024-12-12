@@ -17,81 +17,82 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Sidebar Menu */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background-color: #333;
-            transition: 0.3s;
-            padding-top: 60px;
-            z-index: 1000;
-        }
-        .side-menu a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-        .side-menu a:hover {
-            color: #f1f1f1;
-        }
-        .side-menu .submenu {
-            display: none;
-            padding-left: 30px;
-        }
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
 
-        .side-menu .submenu.active {
-            display: block;
-        }
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000; /* কালো ফন্ট */
+    display: block;
+    transition: 0.3s;
+}
 
-        .menu-icon {
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 36px;
-            cursor: pointer;
-        }
+/* Hover effect - light gray color */
+.side-menu a:hover {
+    color: #f1f1f1;
+}
 
-        /* Cross icon */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
+/* Active link - green color */
+.side-menu a:active {
+    color: #28a745; /* সবুজ ফন্ট */
+}
 
-        /* When the menu is visible */
-        .side-menu.open {
-            left: 0;
-        }
+.side-menu .submenu {
+    display: none;
+    padding-left: 30px;
+}
 
-        /* Body dimming when sidebar is open */
-        body.dimmed {
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
+.side-menu .submenu.active {
+    display: block;
+}
 
-        /* Click area outside the sidebar */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 500;
-        }
+/* Cross icon */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
 
-        .overlay.active {
-            display: block;
-        }
+/* When the menu is visible */
+.side-menu.open {
+    left: 0;
+}
+
+/* Body dimming when sidebar is open */
+body.dimmed {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Click area outside the sidebar */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+
+.overlay.active {
+    display: block;
+}
 
         /* Visit Channel Button */
         .visit-channel {
