@@ -66,10 +66,12 @@ h1 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #fff; /* Change background color to white */
+    background-color: #ffffff;  /* White background */
+    color: black;  /* Black text */
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
     z-index: 9;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the sidebar */
 }
 
 .side-menu.open {
@@ -80,14 +82,14 @@ h1 {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: #333; /* Change text color to dark gray for better contrast on white background */
+    color: #333333;  /* Dark text color */
     display: block;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
-    background-color: #f1f1f1;
-    color: #000; /* Dark color for hover effect */
+    color: #ff4b5c;  /* Red color on hover */
+    background-color: #f1f1f1;  /* Light background color on hover */
 }
 
 /* Overlay (for dimming the page when side menu is open) */
