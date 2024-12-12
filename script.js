@@ -1,8 +1,7 @@
-// Get the menu icon, the menu, the overlay, and the close button
+// Get the menu icon, the menu, and the overlay
 const menuIcon = document.querySelector('.menu-icon');
 const menu = document.querySelector('.side-menu');
 const overlay = document.getElementById('overlay');
-const closeBtn = document.querySelector('.close-btn');
 
 // Function to toggle the menu when clicking the 3-bar icon
 menuIcon.addEventListener('click', () => {
@@ -11,15 +10,17 @@ menuIcon.addEventListener('click', () => {
     document.body.classList.toggle('dimmed'); // Add/remove the dimmed effect on the body
 });
 
-// Close the menu when clicking on the overlay or the close button
+// Close the menu when clicking on the overlay
 overlay.addEventListener('click', () => {
-    menu.classList.remove('open'); // Close the menu
-    overlay.classList.remove('active'); // Remove the overlay
-    document.body.classList.remove('dimmed'); // Remove the dimmed effect on the body
+    menu.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.classList.remove('dimmed');
 });
 
+// Close the menu when clicking on the close button inside the menu
+const closeBtn = document.querySelector('.close-btn');
 closeBtn.addEventListener('click', () => {
-    menu.classList.remove('open'); // Close the menu
-    overlay.classList.remove('active'); // Remove the overlay
-    document.body.classList.remove('dimmed'); // Remove the dimmed effect on the body
+    menu.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.classList.remove('dimmed');
 });
