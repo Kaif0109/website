@@ -169,7 +169,7 @@ h1 {
 .profile-photo {
     width: 100px;
     height: auto;
-    border-radius: 50%;
+    border-radius: auto;
     border: 3px solid #000;
 }
 
