@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+/* Dimmed Effect for Body */
+body.dimmed {
+    background-color: rgba(0, 0, 0, 0.5); /* Dim the background when menu is open */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
 /* Header Section */
 header {
     text-align: center;
@@ -31,7 +37,7 @@ h1 {
     left: 20px;
     cursor: pointer;
     z-index: 10;
-    transition: 0.4s; /* Smooth transition for icon */
+    transition: 0.4s;
 }
 
 .menu-icon .bar {
@@ -39,7 +45,7 @@ h1 {
     height: 3px;
     background-color: white;
     margin: 5px 0;
-    transition: 0.4s; /* Smooth transition for icon */
+    transition: 0.4s;
 }
 
 /* Active state for the menu icon */
@@ -100,7 +106,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 8;
-    transition: background-color 0.3s ease; /* Smooth transition for overlay */
+    transition: background-color 0.3s ease;
 }
 
 #overlay.active {
@@ -191,7 +197,7 @@ h1 {
 .social-links a img {
     width: 40px;
     margin: 10px;
-    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and opacity */
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .social-links a:hover img {
@@ -199,7 +205,7 @@ h1 {
     opacity: 0.8;
 }
 
-/* Footer Section (New) */
+/* Footer Section */
 footer {
     background-color: #333;
     color: white;
