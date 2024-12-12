@@ -166,11 +166,19 @@ h1 {
     background-color: #f4f4f4;
 }
 
+/* Ensuring the profile photo size doesn't change */
 .profile-photo {
-    width: 100px;
-    height: 300px;
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
     border-radius: 50%;
     border: 3px solid #000;
+    object-fit: cover; /* Ensures image doesn't stretch/distort */
+}
+
+/* Ensure that no other part of the CSS affects image size */
+img {
+    max-width: 100%; /* Prevents images from overflowing their containers */
+    height: auto; /* Keeps the aspect ratio intact */
 }
 
 /* About Section */
