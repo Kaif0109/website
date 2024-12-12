@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Without Money</title>
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <!-- OpenGraph Metadata -->
@@ -17,34 +15,76 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sidebar Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+        .side-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+        .side-menu .submenu {
+            display: none;
+            padding-left: 30px;
+        }
+
+        .side-menu a.active + .submenu {
+            display: block;
+        }
+
+        .menu-icon {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Header Section -->
-<header>
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <img src="images/logo.png" alt="Logo" class="logo">
-    <h1>পশ্চিমবঙ্গের ডিজিটাল শিক্ষাগ্রহণে আপনাকে স্বাগতম</h1>
-</header>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>পশ্চিমবঙ্গের ডিজিটাল শিক্ষাগ্রহণে আপনাকে স্বাগতম</h1>
+    </header>
 
-    <!-- Side Menu -->
-    <div class="side-menu">
-        <ul>
-            <li>Math Foundation Batch 2025</li>
-            <li>Math Chapter Wise All Type Questions</li>
-        </ul>
+    <!-- Sidebar Menu -->
+    <div class="side-menu" id="sideMenu">
+        <a href="javascript:void(0)" onclick="toggleSubmenu()">Our Free Batch</a>
+        <div class="submenu">
+            <a href="#">ফ্রি ব্যাচ ১</a>
+            <a href="#">ফ্রি ব্যাচ ২</a>
+        </div>
     </div>
 
     <!-- Visit Our Channel Button -->
     <section class="visit-channel">
-    <a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" class="btn">
-        <img src="images/youtube-logo.png" alt="YouTube Logo" class="youtube-logo"> Visit Our Channel
-    </a>
-</section>
+        <a href="https://youtube.com/@studywithoutmoney-math?si=9HDwdHk8-pj54OPt" class="btn">
+            <img src="images/youtube-logo.png" alt="YouTube Logo" class="youtube-logo"> Visit Our Channel
+        </a>
+    </section>
 
     <!-- About Section -->
     <section class="about">
@@ -98,6 +138,22 @@
             </a>
         </div>
     </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+            } else {
+                menu.style.left = "0px";
+            }
+        }
+
+        function toggleSubmenu() {
+            var submenu = document.querySelector(".side-menu .submenu");
+            submenu.classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
