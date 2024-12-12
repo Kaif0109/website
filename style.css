@@ -123,6 +123,14 @@ h1 {
     cursor: pointer;
 }
 
+/* Profile photo styling */
+.profile-photo {
+    width: 150px; /* প্রস্থ */
+    height: 250px; /* উচ্চতা */
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .side-menu {
