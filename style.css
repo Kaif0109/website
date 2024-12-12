@@ -50,7 +50,7 @@ h1 {
     height: 100%;
     background-color: white; /* Side menu background color */
     color: black;
-    transition: 0.3s;
+    transition: left 0.3s ease-in-out; /* Smooth transition for sliding */
     padding-top: 50px;
     z-index: 9;
 }
@@ -167,6 +167,7 @@ h1 {
     color: #00dfed;
 }
 
+/* Social Links */
 .social-links a img {
     width: 40px;
     margin: 10px;
@@ -175,4 +176,18 @@ h1 {
 
 .social-links a:hover img {
     transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .side-menu {
+        width: 200px; /* Make the side menu slightly smaller on mobile */
+    }
+    .menu-icon {
+        top: 15px;
+        left: 15px;
+    }
+    .btn {
+        font-size: 16px; /* Adjust button font size for smaller screens */
+    }
 }
