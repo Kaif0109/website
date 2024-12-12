@@ -17,83 +17,73 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Sidebar Menu */
-/* Sidebar Menu */
-.side-menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1000;
-}
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #ffffff;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
 
-.side-menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #000000; /* কালো ফন্ট */
-    display: block;
-    transition: 0.3s;
-}
+        .side-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
 
-/* Change color to green when hover or click */
-.side-menu a:hover,
-.side-menu a:active {
-    color: #28a745; /* সবুজ ফন্ট */
-}
+        .side-menu a:hover,
+        .side-menu a:active {
+            color: #28a745;
+        }
 
-.side-menu .submenu {
-    display: none;
-    padding-left: 30px;
-}
+        .side-menu .submenu {
+            display: none;
+            padding-left: 30px;
+        }
 
-.side-menu .submenu.active {
-    display: block;
-}
+        .side-menu .submenu.active {
+            display: block;
+        }
 
-/* Cross icon */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
 
-/* When the menu is visible */
-.side-menu.open {
-    left: 0;
-}
+        .side-menu.open {
+            left: 0;
+        }
 
-/* Body dimming when sidebar is open */
-body.dimmed {
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.3);
-}
+        body.dimmed {
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
 
-/* Click area outside the sidebar */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 500;
-}
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
 
-.overlay.active {
-    display: block;
-}
-
-.overlay.active {
-    display: block;
-}
+        .overlay.active {
+            display: block;
+        }
 
         /* Visit Channel Button */
         .visit-channel {
@@ -175,19 +165,17 @@ body.dimmed {
     </header>
 
     <!-- Sidebar Menu -->
-<div class="side-menu" id="sideMenu">
-    <span class="close-btn" onclick="closeMenu()">×</span>
-    
-    <!-- Menu Heading (এখানে "Menu" লেখা যুক্ত করা হয়েছে) -->
-    <div class="menu-heading">Menu</div>
-    
-    <a href="javascript:void(0)" onclick="toggleSubmenu()">Our Free Batch</a>
-    <div class="submenu">
-        <!-- Updated Links -->
-        <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkpQmx1Zy_KSIdcvPbCD8_h6&si=vZr5R6gZ-CzTNkv1" target="_blank">Math Foundation Batch 2025</a>
-        <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkrdB7xez-RnSJEtB7EVwst6&si=j83B14ZZZWOr9Nh6" target="_blank">Math Chapter Wise All Type Questions</a>
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+        <div class="menu-heading">Menu</div>
+
+        <a href="javascript:void(0)" onclick="toggleSubmenu()">Our Free Batch</a>
+        <div class="submenu">
+            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkpQmx1Zy_KSIdcvPbCD8_h6&si=vZr5R6gZ-CzTNkv1" target="_blank">Math Foundation Batch 2025</a>
+            <a href="https://youtube.com/playlist?list=PL-g7JhaRuAkrdB7xez-RnSJEtB7EVwst6&si=j83B14ZZZWOr9Nh6" target="_blank">Math Chapter Wise All Type Questions</a>
+        </div>
     </div>
-</div>
 
     <!-- Visit Our Channel Button -->
     <section class="visit-channel">
@@ -268,19 +256,3 @@ body.dimmed {
 
         function closeMenu() {
             var menu = document.getElementById("sideMenu");
-            var overlay = document.getElementById("overlay");
-            var body = document.body;
-
-            menu.classList.remove("open");
-            overlay.classList.remove("active");
-            body.classList.remove("dimmed");
-        }
-
-        function toggleSubmenu() {
-            var submenu = document.querySelector(".submenu");
-            submenu.classList.toggle("active");
-        }
-    </script>
-
-</body>
-</html>
