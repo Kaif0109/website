@@ -39,11 +39,10 @@
     transition: 0.3s;
 }
 
-/* No hover effect, no color change until clicked */
-
-/* Active link - green color */
+/* Change color to green when hover or click */
+.side-menu a:hover,
 .side-menu a:active {
-    color: #28a745; /* সবুজ ফন্ট যখন ক্লিক করা হয় */
+    color: #28a745; /* সবুজ ফন্ট */
 }
 
 .side-menu .submenu {
@@ -86,6 +85,10 @@ body.dimmed {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 500;
+}
+
+.overlay.active {
+    display: block;
 }
 
 .overlay.active {
