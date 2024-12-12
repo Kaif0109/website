@@ -123,106 +123,6 @@ h1 {
     cursor: pointer;
 }
 
-/* Visit Our Channel Button */
-.visit-channel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #ff0000;
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
-
-.btn:hover {
-    background-color: #d10000;
-}
-
-.youtube-logo {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-}
-
-/* Photo Container (Unchanged as per request) */
-.photo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200vh;
-    background-color: #f4f4f4;
-}
-
-.profile-photo {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #000;
-}
-
-/* About Section */
-.about {
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Contact Section */
-.contact {
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.contact a {
-    text-decoration: none;
-    color: #00dfed;
-}
-
-/* Social Links (Unchanged as per request) */
-.social-links a img {
-    width: 40px;
-    margin: 10px;
-    transition: transform 0.3s;
-}
-
-.social-links a:hover img {
-    transform: scale(1.1);
-}
-
-/* Footer Section (New) */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #00dfed;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .side-menu {
@@ -234,8 +134,5 @@ footer a:hover {
     }
     .btn {
         font-size: 16px;
-    }
-    footer {
-        font-size: 14px;
     }
 }
