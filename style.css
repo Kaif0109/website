@@ -31,6 +31,7 @@ h1 {
     left: 20px;
     cursor: pointer;
     z-index: 10;
+    transition: 0.4s; /* Smooth transition for icon */
 }
 
 .menu-icon .bar {
@@ -38,7 +39,24 @@ h1 {
     height: 3px;
     background-color: white;
     margin: 5px 0;
-    transition: 0.4s;
+    transition: 0.4s; /* Smooth transition for icon */
+}
+
+/* Active state for the menu icon */
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
 }
 
 /* Side Menu */
@@ -48,28 +66,28 @@ h1 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: white; /* Side menu background color */
+    background-color: white;
     color: black;
-    transition: left 0.3s ease-in-out; /* Smooth transition for sliding */
+    transition: left 0.3s ease-in-out;
     padding-top: 50px;
     z-index: 9;
 }
 
 .side-menu.open {
-    left: 0; /* Move the menu to the left when open */
+    left: 0;
 }
 
 .side-menu a {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: black; /* Menu text color */
+    color: black;
     display: block;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
+    background-color: #f1f1f1;
 }
 
 /* Overlay (for dimming the page when side menu is open) */
@@ -80,12 +98,14 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none; /* Initially hidden */
+    display: none;
     z-index: 8;
+    transition: background-color 0.3s ease; /* Smooth transition for overlay */
 }
 
 #overlay.active {
-    display: block; /* Display the overlay when active */
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background when active */
 }
 
 /* Close button inside the side menu */
@@ -111,7 +131,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     background-color: #ff0000;
-    color: black; /* "Our Free Batch" text color is black */
+    color: black;
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
@@ -171,23 +191,47 @@ h1 {
 .social-links a img {
     width: 40px;
     margin: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for scaling and opacity */
 }
 
 .social-links a:hover img {
     transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Footer Section (New) */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #00dfed;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .side-menu {
-        width: 200px; /* Make the side menu slightly smaller on mobile */
+        width: 200px;
     }
     .menu-icon {
         top: 15px;
         left: 15px;
     }
     .btn {
-        font-size: 16px; /* Adjust button font size for smaller screens */
+        font-size: 16px;
+    }
+    footer {
+        font-size: 14px;
     }
 }
