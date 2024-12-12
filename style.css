@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 
+/* Header Section */
 header {
     text-align: center;
     background-color: #00dfed;
@@ -23,6 +24,7 @@ h1 {
     font-size: 24px;
 }
 
+/* Menu Icon */
 .menu-icon {
     position: absolute;
     top: 20px;
@@ -37,6 +39,63 @@ h1 {
     background-color: white;
     margin: 5px 0;
     transition: 0.4s;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: 0.3s;
+    padding-top: 50px;
+    z-index: 9;
+}
+
+.side-menu.open {
+    left: 0; /* সাইডবার খোলার পর অবস্থান পরিবর্তন */
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+/* Overlay (for dimming the page when side menu is open) */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+    z-index: 8;
+}
+
+#overlay.active {
+    display: block; /* When active, show the overlay */
+}
+
+/* Close button inside the side menu */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Visit Our Channel Section */
