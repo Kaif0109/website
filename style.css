@@ -11,7 +11,7 @@ header {
     text-align: center;
     background-color: #00dfed;
     padding: 20px;
-    position: relative; /* যাতে থ্রি-বার উপরের কোনায় ঠিকভাবে রাখা যায় */
+    position: relative;
 }
 
 header .logo {
@@ -48,28 +48,28 @@ h1 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: white; /* সাইডবারের ব্যাকগ্রাউন্ড সাদা */
-    color: black; /* সাইডবারের লেখা কালো */
+    background-color: white; /* Side menu background color */
+    color: black;
     transition: 0.3s;
     padding-top: 50px;
     z-index: 9;
 }
 
 .side-menu.open {
-    left: 0; /* সাইডবার খোলার পর অবস্থান পরিবর্তন */
+    left: 0; /* Move the menu to the left when open */
 }
 
 .side-menu a {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: black; /* সাইডবারের লেখা কালো */
+    color: black; /* Menu text color */
     display: block;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
-    background-color: #f1f1f1; /* হোভার করার সময় ব্যাকগ্রাউন্ড হালকা সাদা */
+    background-color: #f1f1f1; /* Light gray background on hover */
 }
 
 /* Overlay (for dimming the page when side menu is open) */
@@ -85,7 +85,7 @@ h1 {
 }
 
 #overlay.active {
-    display: block; /* When active, show the overlay */
+    display: block; /* Display the overlay when active */
 }
 
 /* Close button inside the side menu */
@@ -94,14 +94,14 @@ h1 {
     top: 10px;
     right: 20px;
     font-size: 30px;
-    color: black; /* ক্লোজ বাটনের কালো */
+    color: black;
     cursor: pointer;
 }
 
-/* Visit Our Channel Section */
+/* Visit Our Channel Button */
 .visit-channel {
     display: flex;
-    justify-content: center; /* সেকশনের মধ্যে পুরোপুরি মাঝখানে রাখতে */
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin: 20px 0;
@@ -111,11 +111,11 @@ h1 {
     display: inline-flex;
     align-items: center;
     background-color: #ff0000;
-    color: black; /* "Our Free Batch" টেক্সট কালো হবে */
+    color: black; /* "Our Free Batch" text color is black */
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 18px; /* ফন্ট সাইজ */
+    font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     white-space: nowrap;
@@ -126,33 +126,31 @@ h1 {
 }
 
 .youtube-logo {
-    width: 18px; /* লোগো আকার টেক্সটের সাথে মিল */
+    width: 18px;
     height: 18px;
-    margin-right: 8px; /* টেক্সট ও লোগোর মধ্যে স্পেস */
+    margin-right: 8px;
 }
 
-/* পুরো পেজের ফটো মাঝখানে রাখার জন্য */
+/* Photo Container */
 .photo-container {
-    display: flex; /* Flexbox ব্যবহার করা হচ্ছে */
-    justify-content: center; /* অনুভূমিকভাবে মাঝখানে */
-    align-items: center; /* উল্লম্বভাবে মাঝখানে */
-    height: 100vh; /* পুরো ভিউপোর্ট উচ্চতা */
-    background-color: #f4f4f4; /* ব্যাকগ্রাউন্ড রঙ (প্রয়োজনে পরিবর্তন করুন) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-/* আপনার ছবির সাইজ ও অবস্থান নির্ধারণ */
 .profile-photo {
-    width: 200px; /* ফটো প্রস্থ */
-    height: auto; /* অনুপাত ঠিক রাখতে */
-    border-radius: 50%; /* গোলাকার ছবি */
-    border: 3px solid #000; /* কালো বর্ডার */
-    display: inline-block; /* সেন্টার সঠিকভাবে দেখাতে সাহায্য করে */
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #000;
 }
 
-/* About Section - টেক্সট সেন্টার করা */
+/* About Section */
 .about {
-    text-align: center; /* ছবি ও টেক্সটকে সেন্টার করা */
-    margin: 0 auto; /* সেকশন সেন্টার করতে */
+    text-align: center;
+    margin: 0 auto;
     padding: 20px;
 }
 
