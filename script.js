@@ -8,6 +8,7 @@ menuIcon.addEventListener('click', () => {
     menu.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
     overlay.classList.toggle('active'); // Toggle the overlay to dim the body
     document.body.classList.toggle('dimmed'); // Add/remove the dimmed effect on the body
+    menuIcon.classList.toggle('open'); // Change the icon to an "X" when the menu is open
 });
 
 // Close the menu when clicking on the overlay
@@ -15,6 +16,7 @@ overlay.addEventListener('click', () => {
     menu.classList.remove('open');
     overlay.classList.remove('active');
     document.body.classList.remove('dimmed');
+    menuIcon.classList.remove('open'); // Reset the menu icon to hamburger
 });
 
 // Close the menu when clicking on the close button inside the menu
@@ -23,4 +25,5 @@ closeBtn.addEventListener('click', () => {
     menu.classList.remove('open');
     overlay.classList.remove('active');
     document.body.classList.remove('dimmed');
+    menuIcon.classList.remove('open'); // Reset the menu icon to hamburger
 });
